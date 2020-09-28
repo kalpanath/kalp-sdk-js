@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc --clean --reporter=lcovonly --reporter=json --reporter=text mocha *.spec.js",
+    "lint": "jshint .",
+    "validate": "npm ls"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,18 @@
   "bugs": {
     "url": "https://github.com/kalpanath/kalp-sdk-js/issues"
   },
-  "homepage": "https://github.com/kalpanath/kalp-sdk-js#readme"
+  "homepage": "https://github.com/kalpanath/kalp-sdk-js#readme",
+  "dependencies": {
+    "winston": "^3.3.3",
+    "chai": "^4.2.0",
+    "mocha": "^8.1.3",
+    "nyc": "^15.1.0",
+    "winston-sentry": "^0.2.1"
+  },
+  "devDependencies": {
+    "precommit-hook": "^3.0.0"
+  },
+  "pre-commit": [
+    "test"
+  ]
 }
