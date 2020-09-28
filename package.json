@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nyc --clean --reporter=lcovonly --reporter=json --reporter=text mocha *.spec.js",
+    "test": "nyc --clean  --reporter=text-lcov --reporter=lcovonly --reporter=json --reporter=text mocha *.spec.js",
     "lint": "jshint .",
+    "coverage": "codecov --token=\"fa6ff627-a9e2-45c9-83c7-45ab7dc5e4ad\"",
     "validate": "npm ls"
   },
   "repository": {
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/kalpanath/kalp-sdk-js#readme",
   "dependencies": {
     "winston": "^3.3.3",
+    "codecov": "^3.7.0",
     "chai": "^4.2.0",
     "mocha": "^8.1.3",
     "nyc": "^15.1.0",
