@@ -6,4 +6,8 @@ describe('Test npm', () => {
       const result = unit.hello();
       expect(result).to.be.equal(undefined);
     });
+    it('Should print hello on new console', () => {
+        const result = unit.hello(true);
+        expect(result).to.be.equal(undefined);
+      });
 })

@@ -1,6 +1,6 @@
-exports.hello =()=>{
+exports.hello =(param1)=>{
     console.log("Hello");
-    if(true){
+    if(param1){
         console.log("true");
     }
     else {
